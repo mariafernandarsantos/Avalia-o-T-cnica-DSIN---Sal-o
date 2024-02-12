@@ -59,7 +59,8 @@ Seguem imagens das diversas funcionalidades do sistema:
 * O banco de dados vem VAZIO, pois serão adicionados dados conforme ocorrem os cadastros pelo sistema.
 * Além do código em Python que pode ser executado para o funcionamento do sistema, também há um arquivo executável 'sistema_leila.exe' na pasta 'dist'
 * É recomendado executar o sistema por meio da IDE em caso de testar todas as funcionalidades, pois a cada encerramento o arquivo .exe é fechado e deve ser aberto novamente.
-* Dentro do código em 'host', 'user', 'password' e 'database', deve ser inserido as informações do SEU sistema do banco de dados
+* Dentro do código em 'host', 'user', 'password' e 'database', DEVE ser inserido as informações do SEU sistema do banco de dados para funcionamento do programa
+  
 ![image](https://github.com/mariafernandarsantos/Cabeleleila_Leila/assets/106030117/2f10d17e-9388-4094-95ea-036a51d37d0d)
 
 * Caso o arquivo 'sistema_leila.exe' não funcione, será necessário que você execute o seguinte comando em seu terminal:
