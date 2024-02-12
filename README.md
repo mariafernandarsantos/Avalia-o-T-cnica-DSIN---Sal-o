@@ -54,12 +54,12 @@ Seguem imagens das diversas funcionalidades do sistema:
 ![image](https://github.com/mariafernandarsantos/Cabeleleila_Leila/assets/106030117/1ee0709d-78e1-4e24-b0f6-0e9ae2aaa32e)
 
 
-### ⌨️ Notas
+### ⌨️ Notas - Como executar
 
 * O banco de dados vem VAZIO, pois serão adicionados dados conforme ocorrem os cadastros pelo sistema.
 * Além do código em Python que pode ser executado para o funcionamento do sistema, também há um arquivo executável 'sistema_leila.exe' na pasta 'dist'
 * É recomendado executar o sistema por meio da IDE em caso de testar todas as funcionalidades, pois a cada encerramento o arquivo .exe é fechado e deve ser aberto novamente.
-* Dentro do código em 'host', 'user', 'password' e 'database', DEVE ser inserido as informações do SEU sistema do banco de dados para funcionamento do programa
+* Dentro do código em 'host', 'user', 'password' e 'database', DEVE ser inserido as informações do SEU sistema do banco de dados, caso contrário o programa não íra funcionar
   
 ![image](https://github.com/mariafernandarsantos/Cabeleleila_Leila/assets/106030117/2f10d17e-9388-4094-95ea-036a51d37d0d)
 
@@ -73,8 +73,8 @@ Seguem imagens das diversas funcionalidades do sistema:
 
 ## 🛠️ Construído com
 
-* [Python](https://www.python.org)
-* [MySQL](https://www.mysql.com)
+* [Python](https://www.python.org) - Linguagem de programação utilizada
+* [MySQL](https://www.mysql.com) - Banco de dados utilizado
 
 
 ## ✒️ Autora
