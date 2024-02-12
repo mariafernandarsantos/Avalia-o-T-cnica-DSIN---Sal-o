@@ -277,6 +277,81 @@ def altera_agendamento(inserido):
             conexao.commit()
     print('Agendamento alterado com sucesso!')
 
+def altera_leila():
+    comando = f'SELECT agenda.idagendamento, servico, horarioescolhido FROM servicos, agenda'
+    cursor.execute(comando)
+    resultados = cursor.fetchall()
+
+    print('Agendamentos existentes:')
+    for idagendamento, servico, horario in resultados:
+        print(f'ID: {idagendamento}, Serviço: {servico}, Horário: {horario}')
+
+    # SOLICITA O ID DO AGENDAMENTO QUE LEILA DESEJA ALTERAR
+    id_agendamento_alterar = input('Digite o ID do agendamento que deseja alterar: ')
+    if not id_agendamento_alterar.isdigit():
+        print('ID inválido. Tente novamente.')
+    else:
+        # ESCOLHE O QUE ALTERAR
+        quer_alterar = input('Deseja alterar o horário ou o serviço? (Digite 1 para horário ou 2 para serviço): ')
+
+        if quer_alterar != '1' and quer_alterar != '2':
+            print('Resposta inválida, por favor insira 1 para horário e 2 para serviço')
+        else:
+            # ALTERA O HORÁRIO
+            if quer_alterar == '1':
+                novo_horario = input('Digite a nova data e hora do agendamento (formato AAAA-MM-DD HH:MM): ')
+
+                # VALIDA O NOVO HORÁRIO
+                if not valida_horario(novo_horario):
+                    print('Formato de data inválido. Siga o formato AAAA-MM-DD HH:MM')
+                else:
+                    # ATUALIZA O HORÁRIO NA TABELA SERVICOS
+                    foreign_key_off = 'SET foreign_key_checks = 0'
+                    cursor.execute(foreign_key_off)
+                    conexao.commit()
+                    update_agenda_hora = 'UPDATE servicos SET horario = %s WHERE horario = %s'
+                    cursor.execute(update_agenda_hora, (novo_horario, horario))
+                    conexao.commit()
+
+                    # ATUALIZA O HORÁRIO NA TABELA AGENDA
+                    update_servicos_hora = 'UPDATE agenda SET horarioescolhido = %s WHERE idagendamento = %s'
+                    cursor.execute(update_servicos_hora, (novo_horario, id_agendamento_alterar))
+                    conexao.commit()
+                    foreign_key_on = 'SET foreign_key_checks = 1 '
+                    cursor.execute(foreign_key_on)
+                    conexao.commit()
+
+                    print('Agendamento alterado com sucesso!')
+
+            # ALTERA O SERVIÇO
+            elif quer_alterar == '2':
+                print('Lista de serviços disponíveis:')
+                for codigo, servico in lista_servico:
+                    print(f'({codigo}) {servico}')
+
+                # ESCOLHA DO NOVO SERVIÇO
+                novo_servico = int(input('\nDigite o código do novo serviço escolhido: '))
+                novo_servico_escolhido = next((s for c, s in lista_servico if c == novo_servico), None)
+
+                if novo_servico not in [codigo for codigo, _ in lista_servico]:
+                    print('Código inválido! Tente novamente com um número de 1 a 7.')
+                else:
+                    # ATUALIZA TABELA SERVICO
+                    update_servicos = 'UPDATE servicos SET servico = %s WHERE horario = %s'
+                    cursor.execute(update_servicos, (novo_servico_escolhido, horario))
+                    conexao.commit()
+
+                    print('Agendamento alterado com sucesso!')
+
+    id_agendamento_alterar = int(id_agendamento_alterar)
+
+    # OBTÉM O HORÁRIO DO AGENDAMENTO ESPECÍFICO
+    horario_agendado = next((horario for id_agendamento, _, horario in resultados if id_agendamento == id_agendamento_alterar), None)
+
+    if not horario_agendado:
+        print('ID de agendamento não encontrado. Tente novamente.')
+        return
+
 
 # LISTA DE SERVIÇOS
 lista_servico = [
@@ -303,7 +378,12 @@ while True:
         while True:
             try:
                 insere_cadastro = int(input('Bem-vindo de volta! Por favor, insira o número do seu cadastro: '))
-                if not insere_cadastro:
+                # LEILA QUER ALTERAR AGENDAMENTO
+                if insere_cadastro == 0:
+                    print('Bem vinda Leila! Veja e altere seus agendamentos!')
+                    altera_leila()
+
+                elif not insere_cadastro:
                     print('Número de cadastro inválido. Verifique se seu número está correto.')
                     continue
             except ValueError:
