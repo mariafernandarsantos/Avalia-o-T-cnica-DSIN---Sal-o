@@ -41,16 +41,17 @@ Foram feitos testes de todas as funcionalidades do sistema, e tudo correu sem ap
 
 Seguem imagens das diversas funcionalidades do sistema:
 
-![image](https://github.com/mariafernandarsantos/cabeleleila_leila/assets/106030117/b79c9bb7-376e-47b2-8891-b45c8a60b559)
+![image](https://github.com/mariafernandarsantos/Cabeleleila_Leila/assets/106030117/774d221c-8beb-4b60-9f66-49f08a2987ac)
 
-![image](https://github.com/mariafernandarsantos/cabeleleila_leila/assets/106030117/3008ec07-d2e0-460f-9725-31d58931667e)
+![image](https://github.com/mariafernandarsantos/Cabeleleila_Leila/assets/106030117/bace6d14-9b22-4922-b983-e19a50c75edc)
 
-![image](https://github.com/mariafernandarsantos/cabeleleila_leila/assets/106030117/76079875-43f0-4558-8226-bec97bc3443c)
+![image](https://github.com/mariafernandarsantos/Cabeleleila_Leila/assets/106030117/01025e28-006e-436c-9448-b915c71da229)
 
-![image](https://github.com/mariafernandarsantos/cabeleleila_leila/assets/106030117/81da92a2-f195-4368-b9a0-67500bb72b93)
+![image](https://github.com/mariafernandarsantos/Cabeleleila_Leila/assets/106030117/08d60937-e98d-44a1-b9a0-cc8dba14fb3d)
 
-![image](https://github.com/mariafernandarsantos/cabeleleila_leila/assets/106030117/f482f466-63b7-4a23-83a7-e47298173d5c)
+![image](https://github.com/mariafernandarsantos/Cabeleleila_Leila/assets/106030117/c94616cc-ddcb-4316-b087-83f6c42478d1)
 
+![image](https://github.com/mariafernandarsantos/Cabeleleila_Leila/assets/106030117/1ee0709d-78e1-4e24-b0f6-0e9ae2aaa32e)
 
 
 ### ⌨️ Notas
@@ -59,7 +60,7 @@ Seguem imagens das diversas funcionalidades do sistema:
 * Além do código em Python que pode ser executado para o funcionamento do sistema, também há um arquivo executável 'sistema_leila.exe' na pasta 'dist'
 * É recomendado executar o sistema por meio da IDE em caso de testar todas as funcionalidades, pois a cada encerramento o arquivo .exe é fechado e deve ser aberto novamente.
 * Dentro do código em 'host', 'user', 'password' e 'database', deve ser inserido as informações do SEU sistema do banco de dados
-![image](https://github.com/mariafernandarsantos/cabeleleila_leila/assets/106030117/f39b9ddb-2111-48e8-9cc0-71ec567fd9d0)
+![image](https://github.com/mariafernandarsantos/Cabeleleila_Leila/assets/106030117/2f10d17e-9388-4094-95ea-036a51d37d0d)
 
 * Caso o arquivo 'sistema_leila.exe' não funcione, será necessário que você execute o seguinte comando em seu terminal:
   ```
