@@ -53,9 +53,12 @@ Seguem imagens das diversas funcionalidades do sistema:
 
 ![image](https://github.com/mariafernandarsantos/Cabeleleila_Leila/assets/106030117/1ee0709d-78e1-4e24-b0f6-0e9ae2aaa32e)
 
+![image](https://github.com/mariafernandarsantos/Cabeleleila_Leila/assets/106030117/6ffee3e3-5a50-4123-9211-41a7c265d906)
+
 
 ### ⌨️ Notas - Como executar
 
+* Para usar o sistema como LEILA, é necessário inserir o número de cadastro 0.
 * O banco de dados vem VAZIO, pois serão adicionados dados conforme ocorrem os cadastros pelo sistema.
 * Além do código em Python que pode ser executado para o funcionamento do sistema, também há um arquivo executável 'sistema_leila.exe' na pasta 'dist'
 * É recomendado executar o sistema por meio da IDE em caso de testar todas as funcionalidades, pois a cada encerramento o arquivo .exe é fechado e deve ser aberto novamente.
